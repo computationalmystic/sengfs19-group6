@@ -11,7 +11,7 @@ display the more detailed information about a selected repository, but this will
 For now a banner is displayed to let the user know that they have reached that page, and more details will be coming
 soon.
 
-The UI code was then deployed on a Ruby on rails backend server, which
+The UI code was then deployed on a Ruby on Rails backend server, which
 hosts the application. By clicking on the link provided, you can view our
 frontend application in it's current state. In the future, we hope to use the 
 ruby on rails backend capabilities to read the api endpoints and cache the data
@@ -23,6 +23,9 @@ We have included a description of our UI design in the markdown document
 above. This document describes in detail how our application will look and 
 function. Design elements that have already been added to the application as
 well as elements that will soon be implemented are described there.
+  
+Frontend and Ruby on Rails code/setup are included on the master branch under
+the group-frontend and RubyOnRails folders
 
 
 
