@@ -1,16 +1,29 @@
-## Basics
+# Sprint 2: Beginning Deployment
 
-2. Your primary objective in this sprint is to get something working and deployed. 
-    - We will cover Augur deployment on your servers in class on Thursday this week. 
-    - Tuesday, you will need to be in your teams and decide what you are going to prototype. 
-3. The goal is to get something *working* and *deployed*. That something should be an elementary, early version of something you want to build. _Something_ is defined as a metrics display, a new endpoint, or discernible progress on back end work (mostly these are individual projects). 
-4. Create a "sprint-2" folder in your Augur repositories. In that folder place: 
-    - A README.md file that explains what you are doing in this sprint, and provides a detailed description of the intended design. "Detailed" should keep in mind that you are building something that is "in addition to" the base code that you have to work with, so you do not need to specify/design the system. Only your intended additions to it. 
-    - Make changes to this document as you work so that your progress can be monitored by your team mates. 
-    
- ## Frontend Teams
-1. Identify 3 front end designs that you will build for the project. These can be different than your sprint 1 proposal if you decide to make a change. 
-2. Decide where each proposed new front end piece will fit in the Augur design. You don't have to put it directly in Augur right now, but you should think about where it fits in the overall information architecture. 
-3. Implement one UI page fully. It does not need to be correct or fully functional, but it should show *some* actual data. 
-4. If you are working in your own web app and not deploying the front end in Augur the expectations are that your design will be more highly functional than if you put it inside Augur. Basically, you can choose the complexity of building it in Augur, or the complexity of delivering a more impressive front end than what you see in Augur. Honestly, this should not be too hard. 
+### Deployment server link: [http://129.114.104.224/](http://129.114.104.224/)
+
+For this sprint, we created the first basic components of our Augur Informatics application UI. 
+So far we have generated an Angular application that can read two of the most important Augur API endpoints, 
+repository groups and specific repositories. It displays the data retrieved using Boostrap UI elements, to 
+create a simple and easy understand design for the user. Clicking on those data elements will navigate you 
+through the different pages of the application. We have a third page set up, in which we will add and
+display the more detailed information about a selected repository, but this will be added in the near future. 
+For now a banner is displayed to let the user know that they have reached that page, and more details will be coming
+soon.
+
+The UI code was then deployed on a Ruby on rails backend server, which
+hosts the application. By clicking on the link provided, you can view our
+frontend application in it's current state. In the future, we hope to use the 
+ruby on rails backend capabilities to read the api endpoints and cache the data
+received, so the application does not have to fetch all that information
+each time the page is loaded. This will add to the efficiency and speed
+of our design. 
+
+We have included a description of our UI design in the markdown document
+above. This document describes in detail how our application will look and 
+function. Design elements that have already been added to the application as
+well as elements that will soon be implemented are described there.
+
+
+
 
