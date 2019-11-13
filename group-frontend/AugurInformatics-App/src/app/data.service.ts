@@ -16,20 +16,17 @@ export class DataService {
     return this.http.get('http://augur.osshealth.io:5000/api/unstable/repo-groups/' + groupId + '/repos/' );
   }
 
-  getContributors(groupId: string, repoId: string){
-    return this.http.get('http://augur.osshealth.io:5000/api/unstable/repo-groups/'
-     + groupId + '/repos/' + repoId + '/contributors/' );
-  } 
-
+  //You can pass the url id to this function as a string a receive the data, so we don't have to write
+  //a function for every endpoint
   getInfo(groupId: string, repoId: string, endpoint: string){
     return this.http.get('http://augur.osshealth.io:5000/api/unstable/repo-groups/'
      + groupId + '/repos/' + repoId + '/' + endpoint + '/' );
   } 
 
-  getPulls(groupId: string, repoId: string){
-    return this.http.get('http://augur.osshealth.io:5000/api/unstable/repo-groups/'
-     + groupId + '/repos/' + repoId + '/pull-request-acceptance-rate/' );
-  }
+  //'pull-request-acceptance-rate' for that endpoint in getInfo
+
+  //'issues-active' for that endpoint in getInfo
+
 
   getIssues(){
     return this.http.get('http://augur.osshealth.io:5000/api/unstable/repo-groups/24/repos/25151/issues-active');

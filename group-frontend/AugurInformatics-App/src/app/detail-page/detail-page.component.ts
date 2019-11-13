@@ -30,11 +30,6 @@ export class DetailPageComponent implements OnInit {
     }
     );
 
-    // this.dataService.getPulls(this.urlGroupId, this.urlRepoId).subscribe(data => {
-    //   this.pulls = data;
-
-    // }
-    // );
   }
 
 }
