@@ -12,8 +12,6 @@ export class DetailPageComponent implements OnInit {
 
   contributors: any;
 
-  pulls: Object;
-
   urlGroupId: string = this.route.snapshot.paramMap.get('groupId');
 
   urlRepoId: string = this.route.snapshot.paramMap.get('repoId');

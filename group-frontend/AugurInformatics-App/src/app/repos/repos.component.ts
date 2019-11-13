@@ -10,7 +10,7 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class ReposComponent implements OnInit {
 
-  repos: Object;
+  repos: any;
 
   urlId: string = this.route.snapshot.paramMap.get('groupId');
 
