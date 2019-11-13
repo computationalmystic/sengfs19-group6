@@ -21,6 +21,11 @@ export class DataService {
      + groupId + '/repos/' + repoId + '/contributors/' );
   } 
 
+  getInfo(groupId: string, repoId: string, endpoint: string){
+    return this.http.get('http://augur.osshealth.io:5000/api/unstable/repo-groups/'
+     + groupId + '/repos/' + repoId + '/' + endpoint + '/' );
+  } 
+
   getPulls(groupId: string, repoId: string){
     return this.http.get('http://augur.osshealth.io:5000/api/unstable/repo-groups/'
      + groupId + '/repos/' + repoId + '/pull-request-acceptance-rate/' );
