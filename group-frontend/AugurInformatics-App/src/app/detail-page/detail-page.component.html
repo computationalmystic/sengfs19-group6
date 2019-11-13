@@ -1,9 +1,55 @@
-<p>Repo information will be displayed here!</p>
+<h3>Detailed Information About Repository</h3>
+<br>
 
-<!-- 
-<h3>Pull requests</h3>
+<label>Select which detail you'd like to view about this repository:</label>
+<form>
+    <select class="custom-select" style="width: 50em;" [(ngModel)]="selectedInfo" name="selectedInfo">
+        <option></option>
+        <option [ngValue]="'contr'">Contributors</option>
+    </select>
+</form>
+<br>
+<hr>
+<ng-container *ngIf="selectedInfo !== '' && selectedInfo === 'contr' ">
 
-<ng-container *ngIf="!pulls">
+    <h3>Contributors</h3><br>
+
+    <ng-container *ngIf="!contributors">
+        <h4>Loading repos in group, please wait a moment...</h4>
+    </ng-container>
+
+    <ng-container *ngIf="contributors && contributors.length === 0">
+        <h4>No Contributors found in this repository</h4>
+    </ng-container>
+
+    <ng-container *ngIf="contributors">
+        <div class="card-deck">
+
+            <div *ngFor="let cont of contributors">
+
+                <div class="card custom-card">
+
+                    <h3> User: {{ cont.user_id }} </h3>
+                    <br>
+                    <h4> Number of commits: {{ cont.commits }} </h4>
+                    <h4> Number of issues: {{ cont.issues }} </h4>
+                    <h4> Pull requests: {{ cont.pull_requests }} </h4>
+                    <h4> Total: {{ cont.total }} </h4>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </ng-container>
+
+</ng-container>
+
+
+
+<!-- <ng-container *ngIf="!pulls">
     <h4>Loading pull requests info, please wait a moment...</h4>
 </ng-container>
 
@@ -23,39 +69,6 @@
                 <br>
                 <h4> Rate: {{ pull.rate }} </h4>
       
-
-            </div>
-
-
-        </div>
-
-    </div>
-
-</ng-container>
-
-<h3>Contributors</h3><br>
-
-<ng-container *ngIf="!contributors">
-    <h4>Loading repos in group, please wait a moment...</h4>
-</ng-container>
-
-<ng-container *ngIf="contributors && contributors == []">
-    <h4>No Contributors found in this repository</h4>
-</ng-container>
-
-<ng-container *ngIf="contributors">
-    <div class="card-deck">
-
-        <div *ngFor="let cont of contributors">
-
-            <div class="card custom-card">
-
-                <h3> User: {{ cont.user_id }} </h3>
-                <br>
-                <h4> Number of commits: {{ cont.commits }} </h4>
-                <h4> Number of issues: {{ cont.issues }} </h4>
-                <h4> Pull requests: {{ cont.pull_requests }} </h4>
-                <h4> Total: {{ cont.total }} </h4>
 
             </div>
 
