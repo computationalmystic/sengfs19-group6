@@ -10,6 +10,7 @@ import { ReposComponent } from './repos/repos.component';
 import { DetailPageComponent } from './detail-page/detail-page.component'; 
 
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { ContributorsComponent } from './detail-page/info/contributors/contributors.component';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
     AppComponent,
     HomeComponent,
     ReposComponent,
-    DetailPageComponent
+    DetailPageComponent,
+    ContributorsComponent
   ],
   imports: [
     BrowserModule,
