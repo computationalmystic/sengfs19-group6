@@ -13,8 +13,8 @@
 
 <ng-container *ngIf="selectedInfo !== '' && selectedInfo === 'contr' ">
 
-  //this is used to open the contributor sub component if the above condition is true. The name of the component is in the ts file
-  //the square brackets send the variable specified in "" to the sub component. 
+  <!-- this is used to open the contributor sub component if the above condition is true. The name of the component is in the ts file
+  the square brackets send the variable specified in "" to the sub component. -->
     <app-contributors [urlGroupId]="urlGroupId" [urlRepoId]="urlRepoId"></app-contributors>
 
 </ng-container>
