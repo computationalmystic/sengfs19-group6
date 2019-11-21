@@ -6,6 +6,7 @@
     <select class="custom-select" style="width: 50em;" [(ngModel)]="selectedInfo" name="selectedInfo">
         <option></option>
         <option [ngValue]="'contr'">Contributors</option>
+        <option [ngValue]="'changes'">Commits Over Time</option>
     </select>
 </form>
 <br>
@@ -17,34 +18,9 @@
 
 </ng-container>
 
+<ng-container *ngIf="selectedInfo !== '' && selectedInfo === 'changes' ">
 
+    <app-commits-over-time [urlGroupId]="urlGroupId" [urlRepoId]="urlRepoId"></app-commits-over-time>
 
-<!-- <ng-container *ngIf="!pulls">
-    <h4>Loading pull requests info, please wait a moment...</h4>
 </ng-container>
 
-<ng-container *ngIf="pulls && pulls == []">
-    <h4>No pull requests found in this repository</h4>
-</ng-container>
-<br>
-
-<ng-container *ngIf="pulls">
-    <div class="card-deck">
-
-        <div *ngFor="let pull of pulls">
-
-            <div class="card custom-card">
-
-                <h3>{{ pull.date }} </h3>
-                <br>
-                <h4> Rate: {{ pull.rate }} </h4>
-      
-
-            </div>
-
-
-        </div>
-
-    </div>
-
-</ng-container> -->
