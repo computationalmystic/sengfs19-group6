@@ -16,10 +16,8 @@ export class CommitsOverTimeComponent implements OnInit {
   @Input() urlGroupId: string;
   @Input() urlRepoId: string;
 
-  public lineChartData: ChartDataSets[] = [
-    { data: [65, 59, 80, 81, 56, 55, 40], label: 'Series A' },
-  ];
-  public lineChartLabels: Label[] = ['January', 'February', 'March', 'April', 'May', 'June', 'July'];
+  public lineChartData: ChartDataSets[];
+  public lineChartLabels: Label[];
   public lineChartOptions: ChartOptions = {
     responsive: true,
   };
@@ -30,7 +28,7 @@ export class CommitsOverTimeComponent implements OnInit {
     },
   ];
   public lineChartLegend = true;
-  public lineChartType = 'line';
+  public lineChartType = 'bar';
   public lineChartPlugins = [];
 
   constructor(private dataService: DataService) { }
@@ -39,6 +37,28 @@ export class CommitsOverTimeComponent implements OnInit {
     this.dataService.getInfo(this.urlGroupId, this.urlRepoId, 'code-changes').subscribe(data => {
       this.changes = data;
 
+      this.lineChartLabels = [];
+      this.lineChartData = [];
+
+      for(let i = 0; i < this.changes.length; i++){
+        this.lineChartLabels.push(this.changes[i].date.slice(0,10));
+        this.lineChartData.push(this.changes[i].commit_count);
+      }
+
+    //   let date = [];
+    //   let commit_count = [];
+    //   let commit_rate =[];
+    //   var i = 0;
+      
+    //   this.changes.forEach(commit => {
+    //     commit_rate = commit.date
+    //     date[i] = commit_rate.slice(0,10)
+    //     commit_count[i] = commit.commit_count
+    //     i++
+    // })
+    //   console.log(commit_count);
+    //   this.lineChartData = [{ data: [commit_count[0], commit_count[1], commit_count[2]], label: 'Series A' }]
+    //   this.lineChartLabels = [date[0], date[1], date[2]]
     }
     );
   }

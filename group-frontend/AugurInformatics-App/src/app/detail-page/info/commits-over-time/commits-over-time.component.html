@@ -10,10 +10,10 @@
 
     <ng-container *ngIf="changes">
         
-        <div style="width: 500px; height: 500px; margin: 10px auto;">
+        <div style="margin: 10px auto;">
             <div style="display: block;">
-                <canvas baseChart width="400" height="400"
-                    [datasets]="lineChartData"
+                <canvas baseChart width="600" height="500"
+                    [data]="lineChartData"
                     [labels]="lineChartLabels"
                     [options]="lineChartOptions"
                     [colors]="lineChartColors"
