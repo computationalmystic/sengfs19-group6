@@ -10,16 +10,16 @@
 
     <ng-container *ngIf="changes">
         
-        <div style="margin: 10px auto;">
+        <div style="width: 60%; height: 40%; margin: 10px auto;">
             <div style="display: block;">
                 <canvas baseChart width="600" height="500"
-                    [data]="lineChartData"
-                    [labels]="lineChartLabels"
-                    [options]="lineChartOptions"
-                    [colors]="lineChartColors"
-                    [legend]="lineChartLegend"
-                    [chartType]="lineChartType"
-                    [plugins]="lineChartPlugins">
+                    [data]="barChartData"
+                    [labels]="barChartLabels"
+                    [options]="barChartOptions"
+                    [colors]="barChartColors"
+                    [legend]="barChartLegend"
+                    [chartType]="barChartType"
+                    [plugins]="barChartPlugins">
                 </canvas>
             </div>
 

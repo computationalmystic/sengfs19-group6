@@ -16,20 +16,23 @@ export class CommitsOverTimeComponent implements OnInit {
   @Input() urlGroupId: string;
   @Input() urlRepoId: string;
 
-  public lineChartData: ChartDataSets[];
-  public lineChartLabels: Label[];
-  public lineChartOptions: ChartOptions = {
+  public barChartData: ChartDataSets[];
+  public barChartLabels: Label[];
+  public barChartOptions: ChartOptions = {
     responsive: true,
+    scales: {
+      yAxes: [{ id: 'y-axis-1', type: 'linear', position: 'left', ticks: { min: 0 } }]
+    }
   };
-  public lineChartColors: Color[] = [
+  public barChartColors: Color[] = [
     {
       borderColor: 'black',
-      backgroundColor: 'rgba(255,0,0,0.3)',
+      backgroundColor: 'rgba(255,0,0,0.6)',
     },
   ];
-  public lineChartLegend = true;
-  public lineChartType = 'bar';
-  public lineChartPlugins = [];
+  public barChartLegend = true;
+  public barChartType = 'bar';
+  public barChartPlugins = [];
 
   constructor(private dataService: DataService) { }
 
@@ -37,12 +40,12 @@ export class CommitsOverTimeComponent implements OnInit {
     this.dataService.getInfo(this.urlGroupId, this.urlRepoId, 'code-changes').subscribe(data => {
       this.changes = data;
 
-      this.lineChartLabels = [];
-      this.lineChartData = [];
+      this.barChartLabels = [];
+      this.barChartData = [];
 
       for(let i = 0; i < this.changes.length; i++){
-        this.lineChartLabels.push(this.changes[i].date.slice(0,10));
-        this.lineChartData.push(this.changes[i].commit_count);
+        this.barChartLabels.push(this.changes[i].date.slice(0,10));
+        this.barChartData.push(this.changes[i].commit_count);
       }
 
     //   let date = [];
