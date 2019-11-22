@@ -13,4 +13,4 @@ After selecting a repository group and repository, the user will be directed to 
 
 Description of the second: The second UI is a simple visualization of 3 API endpoints. The first dropdown bar selects the repo group and displays the top 10 total repo commits. The second dropdown allows you to select a repo. The chart displays the top committers of that group. The third chart displays that repo group's pull request acceptance rate.
 
-Description of the third:
+Description of the third: This is also a simple visualization. There are 4 tabs at the top of the page that will direct you to the home page, repo groups dropdown menu, repos dropdown menu and a link to our project github. When selecting the repo group and repo there will be a chart that appears, this will display the mean comments per day of the selected repo. More graphs could be added to appear below the one shown to display more information on the repo groups themselves or even more about the selected repo chosen. 
