@@ -5,4 +5,10 @@ Links:
   *Second: http://3.135.206.178/
   *Third: http://18.222.168.62/
   
- Originially we planned to host them all on the same server using nginx to serve the webpages, but because angular is deisnged to be used for single page web applications, this wasn't an option for us. 
+ Originially we planned to host them all on the same server using nginx to serve the webpages, but because angular is designed to be used for single page web applications, this wasn't an option for us. 
+
+Description of the first:
+
+Description of the second: The second UI is a simple visualization of 3 API endpoints. The first dropdown bar selects the repo group and displays the top 10 total repo commits. The second dropdown allows you to select a repo. The chart displays the top committers of that group. The third chart displays that repo group's pull request acceptance rate.
+
+Description of the third:
