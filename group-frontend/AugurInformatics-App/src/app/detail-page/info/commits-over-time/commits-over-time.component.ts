@@ -27,10 +27,10 @@ export class CommitsOverTimeComponent implements OnInit {
   public barChartColors: Color[] = [
     {
       borderColor: 'black',
-      backgroundColor: 'rgba(255,0,0,0.6)',
+      backgroundColor: 'rgba(255,0,0,1)',
     },
   ];
-  public barChartLegend = true;
+  public barChartLegend = false;
   public barChartType = 'bar';
   public barChartPlugins = [];
 
