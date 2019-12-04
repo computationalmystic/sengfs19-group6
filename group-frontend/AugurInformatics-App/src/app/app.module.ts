@@ -11,6 +11,9 @@ import { DetailPageComponent } from './detail-page/detail-page.component';
 
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { ContributorsComponent } from './detail-page/info/contributors/contributors.component';
+import { CommitsOverTimeComponent } from './detail-page/info/commits-over-time/commits-over-time.component';
+
+import { ChartsModule } from 'ng2-charts';
 
 
 @NgModule({
@@ -19,14 +22,16 @@ import { ContributorsComponent } from './detail-page/info/contributors/contribut
     HomeComponent,
     ReposComponent,
     DetailPageComponent,
-    ContributorsComponent
+    ContributorsComponent,
+    CommitsOverTimeComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    ChartsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
