@@ -14,6 +14,7 @@ import { ContributorsComponent } from './detail-page/info/contributors/contribut
 import { CommitsOverTimeComponent } from './detail-page/info/commits-over-time/commits-over-time.component';
 
 import { ChartsModule } from 'ng2-charts';
+import { AboutComponent } from './about/about.component';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { ChartsModule } from 'ng2-charts';
     ReposComponent,
     DetailPageComponent,
     ContributorsComponent,
-    CommitsOverTimeComponent
+    CommitsOverTimeComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,
